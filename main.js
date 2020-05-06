@@ -46,6 +46,8 @@ if (!program.nozip) {
 
 var exporter = program.nozip ? {
     write: function (name, content) {
+        if (config.packformat >= 3)
+            name = name.toLowerCase();
         var allName = output + "/" + name;
         fse.ensureFileSync(allName);
         fse.writeFileSync(allName, content);
@@ -54,6 +56,8 @@ var exporter = program.nozip ? {
 }
  : {
     write: function (name, content) {
+        if (config.packformat >= 3)
+            name = name.toLowerCase();
         zip.addFile(utils.trimPath(name), Buffer.alloc(content.length, content));
     },
     end: function () {
