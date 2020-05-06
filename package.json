@@ -1,6 +1,6 @@
 {
   "name": "icecanary",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Json generator for Minecraft Java Edition resource packs",
   "main": "main.js",
   "scripts": {
