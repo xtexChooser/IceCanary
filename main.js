@@ -115,6 +115,11 @@ utils.info(`Building ${config.name}-${config.version}`);
             default:
                 utils.error(`Unknown format of language translate data for ${langCfg.name}`);
             }
+            if (langCfg.data.objective) {
+                var newTexts = {};
+                utils.deobjectiveObject(texts, '', newTexts);
+                texts = newTexts;
+            }
             if (langCfg.data.type == 'merge') {
                 asyncHolder.start();
                 utils.getAsset(mcversion, `assets/minecraft/lang/${langCfg.data.lang}.json`, function (data) {

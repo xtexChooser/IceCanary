@@ -39,7 +39,20 @@ languages:
       file: lang_test.json
       # Source format, json or yaml, optional, defaults to json
       format: json
+      # Is the language data objective?
+      objective: false
       # Upstream language, only when the type is merge, such as zh_CN, only supported native Minecraft language
+      lang: zh_CN
+  test_lang2:
+    name: TestLanguageObjective
+    region: IceCanaryObjective
+    bidirectional: true
+    ns: minecraft
+    data:
+      type: merge
+      file: lang_test2.yml
+      format: yaml
+      objective: true
       lang: zh_CN
 
 # Raw data, optional

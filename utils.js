@@ -95,6 +95,15 @@ var Utils = {
         while (src.startsWith('\\') || src.startsWith('/'))
             src = src.slice(1);
         return src;
+    },
+    deobjectiveObject: function (src, header, dest) {
+        for (name in src) {
+            if (src[name].indexOf) {
+                dest[header + name] = src[name];
+            } else {
+                Utils.deobjectiveObject(src[name], header + name + '.', dest);
+            }
+        }
     }
 };
 
