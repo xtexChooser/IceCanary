@@ -1,0 +1,37 @@
+{
+  "name": "icecanary",
+  "version": "1.0.0",
+  "description": "A Json generator for Minecraft Java Edition resource packs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbwxtex/IceCanary.git"
+  },
+  "keywords": [
+    "minecraft",
+    "minecraft-resourcepack",
+    "resourcepack",
+    "generator",
+    "json",
+    "minecraft-java-edition"
+  ],
+  "bin": {
+    "icecanary": "main.js"
+  },
+  "author": "xtex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zbwxtex/IceCanary/issues"
+  },
+  "homepage": "https://github.com/zbwxtex/IceCanary#readme",
+  "dependencies": {
+    "adm-zip": "^0.4.14",
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "fs-extra": "^9.0.0",
+    "js-yaml": "^3.13.1"
+  }
+}

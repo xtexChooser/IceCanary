@@ -1,0 +1,51 @@
+# Name of Resource Pack(Will not package to resource pack)
+name: IceCanaryTest
+# Version of Resource Pack(Will not package to resource pack)
+version: "1.0"
+# Description of Resource Pack(Can be a object)
+description: "This is a test for IceCanary"
+# Format of Resource Pack
+# From JE 13w24a to 1.8.8 and 1.8.9, this value should be 1
+# From 15w31a to 1.10.2, this value should be 2
+# From 16w32a to 17w47b, this value should be 3
+# From 17w48a to 19w46b, this value should be 4
+# After JE 1.15-pre1, this value should be 5
+# Wiki: https://minecraft-zh.gamepedia.com/%E8%B5%84%E6%BA%90%E5%8C%85
+packformat: 5
+# File Name of Icon(Copied from OCD resources pack), optional
+icon: icon.png
+# Minecraft Version, look 'https://gitee.com/xtex/minecraft-assets/' or 'https://github.com/InventivetalentDev/minecraft-assets/'
+mcver: "1.15.2"
+# Comment for packaging(only zip build), optional
+packaging_comment: "This is a packaging comment!!!"
+
+# List of additional languages, optional
+languages:
+  # Language code for a language, such as zh_CN
+  test_lang:
+    # The full name of the language, such as English
+    name: TestLanguage
+    # Country or region name
+    region: IceCanary
+    # Whether to display from right to left
+    bidirectional: false
+    # Namespace, optional, defaults to `minecraft`
+    ns: minecraft
+    # Translate data
+    data:
+      # Type of data, static or merge
+      type: merge
+      # File of translated data
+      file: lang_test.json
+      # Source format, json or yaml, optional, defaults to json
+      format: json
+      # Upstream language, only when the type is merge, such as zh_CN, only supported native Minecraft language
+      lang: zh_CN
+
+# Raw data, optional
+raw:
+  # Data namespace and local directory
+  minecraft: mc
+
+# Raw data folder to archive, optional
+archive_raw: raw
