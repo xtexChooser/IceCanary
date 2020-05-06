@@ -77,6 +77,8 @@ utils.info(`Building ${config.name}-${config.version}`);
         packmeta.language = {};
         for (n in config.languages) {
             var langCfg = config.languages[n];
+            if (langCfg.bidirectional == undefined)
+                langCfg.bidirectional = false;
             packmeta.language[n] = {
                 name: langCfg.name,
                 region: langCfg.region,
@@ -104,6 +106,8 @@ utils.info(`Building ${config.name}-${config.version}`);
                 langCfg.ns = 'minecraft';
             if (!langCfg.data.format)
                 langCfg.data.format = 'json';
+            if (langCfg.data.objective == undefined)
+                langCfg.data.objective = false;
             var texts = {};
             switch (langCfg.data.format) {
             case 'json':
@@ -122,6 +126,8 @@ utils.info(`Building ${config.name}-${config.version}`);
             }
             if (langCfg.data.type == 'merge') {
                 asyncHolder.start();
+                if (!langCfg.data.lang)
+                    langCfg.data.lang = 'zh_CN';
                 utils.getAsset(mcversion, `assets/minecraft/lang/${langCfg.data.lang}.json`, function (data) {
                     asyncHolder.end();
                     data = JSON.parse(data);

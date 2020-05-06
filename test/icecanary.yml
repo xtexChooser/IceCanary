@@ -27,7 +27,7 @@ languages:
     name: TestLanguage
     # Country or region name
     region: IceCanary
-    # Whether to display from right to left
+    # Whether to display from right to left, optional, defaults to false
     bidirectional: false
     # Namespace, optional, defaults to `minecraft`
     ns: minecraft
@@ -39,9 +39,9 @@ languages:
       file: lang_test.json
       # Source format, json or yaml, optional, defaults to json
       format: json
-      # Is the language data objective?
+      # Is the language data objective? optional, defaults to false
       objective: false
-      # Upstream language, only when the type is merge, such as zh_CN, only supported native Minecraft language
+      # Upstream language, only when the type is merge, such as zh_CN, only supported native Minecraft language, optional, defaults to `zh_CN`
       lang: zh_CN
   test_lang2:
     name: TestLanguageObjective
@@ -53,7 +53,6 @@ languages:
       file: lang_test2.yml
       format: yaml
       objective: true
-      lang: zh_CN
 
 # Raw data, optional
 raw:
