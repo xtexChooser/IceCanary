@@ -15,9 +15,9 @@ packformat: 5
 # File Name of Icon(Copied from OCD resources pack), optional
 icon: icon.png
 # Minecraft Version, look 'https://gitee.com/xtex/minecraft-assets/' or 'https://github.com/InventivetalentDev/minecraft-assets/'
-mcver: "1.15.2"
+mcver: "1.16.1"
 # Comment for packaging(only zip build), optional
-packaging_comment: "This is a packaging comment!!!"
+package_comment: "This is a packaging comment!!!"
 
 # List of additional languages, optional
 languages:

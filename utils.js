@@ -104,6 +104,19 @@ var Utils = {
                 Utils.deobjectiveObject(src[name], header + name + '.', dest);
             }
         }
+    },
+    /*escapeObject: function (obj) {
+        for (n in obj) {
+            if (obj[n]instanceof Object) {
+                obj[n] = Utils.escapeObject(obj[n]);
+            } else
+                obj[n] = escape(obj[n]).replace(/%/g, '\\').toLowerCase();
+        }
+        return obj;
+    },*/
+    escapeObjectToJson: function (obj) { // Force Disabled
+        return JSON.stringify(obj);
+		//return JSON.stringify(Utils.escapeObject(obj)).replace(/\\\\/g, '\\');
     }
 };
 
